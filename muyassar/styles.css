@@ -1,0 +1,110 @@
+
+/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Header styles */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #007BFF;
+    text-transform: uppercase;
+}
+
+/* Verse section styles */
+.verse-section {
+    margin-bottom: 30px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.verse-section h2 {
+    font-size: 1.5em;
+    color: #007BFF;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+}
+
+/* Arabic text styles */
+.arabic {
+    font-family: 'Amiri', serif; /* Recommended for Arabic text */
+    font-size: 1.6em;
+    color: #1E8449;
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 10px;
+    padding: 5px;
+    background: #f7fdf7;
+    border-right: 4px solid #1E8449;
+    border-radius: 4px;
+}
+
+/* Quranic translation styles */
+.quran-text {
+    font-style: italic;
+    font-size: 1.2em;
+    color: #000;
+    margin: 10px 0;
+    padding: 5px;
+    background: #f0f8ff;
+    border-left: 4px solid #007BFF;
+    border-radius: 4px;
+}
+
+/* Muyassar commentary styles */
+.muyassar {
+    font-size: 1em;
+    color: #6C3483;
+    background: #f9f2f9;
+    padding: 10px;
+    border-left: 4px solid #6C3483;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Explanation block styles */
+.explanation {
+    font-size: 1em;
+    color: #444;
+    background: #f7f7f7;
+    padding: 10px;
+    border-left: 4px solid #007BFF;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* Footer styles */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Hover effect for verse sections */
+.verse-section:hover {
+    background: #f1f1f1;
+    transition: background 0.3s ease;
+}
+  
