@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sura</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 80%;
+      margin: 20px auto;
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .verse {
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      background-color: #f4f4f4;
+      transition: background-color 0.3s ease;
+    }
+    .verse:nth-child(even) {
+      background-color: #e1f7d5;
+    }
+    .verse:nth-child(odd) {
+      background-color: #f4f4f4;
+    }
+    .verse-number {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #333;
+    }
+    .arabic-text {
+      font-size: 1.4em;
+      direction: rtl;
+      text-align: right;
+      font-family: 'Amiri', serif;
+      color: #222;
+      margin-top: 10px;
+    }
+    .verse-text {
+      font-size: 1.2em;
+      color: #555;
+      margin: 10px 0;
+    }
+    .commentary {
+      font-size: 1em;
+      color: #444;
+      line-height: 1.6;
+      background-color: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+    .commentary b {
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="verseContainer"></div>
+  <script>
+    const verses = [{"verse":"1","text":"In the name of Allah, Most Gracious, Most Merciful.","commentary":"This first verse is an <strong>opening invocation</strong>, similar to how one might begin a book or important undertaking by stating their intention or dedication. It emphasizes that everything begins with and is done in the name of <strong>Allah</strong>, a specific name for the Almighty in the Abrahamic tradition. The two attributes used here to describe Allah, <strong>\"the Merciful, the Beneficent,\"</strong> highlight the core concept of God's boundless compassion and kindness. This opening sets the tone for the entire chapter (Surah), emphasizing divine mercy as the foundation. It also aligns with the Islamic principle of <strong>invoking Allah's name at the start of every action</strong>.","arabic":"بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"},{"verse":"2","text":"Praise be to Allah, the Cherisher and Sustainer of the worlds;","commentary":"Following the opening invocation, the chapter moves to <strong>praise Allah</strong>. The phrase <strong>\"the Lord of all the worlds\"</strong> signifies Allah's <strong>absolute sovereignty and ownership over everything that exists</strong>. This establishes the concept of a single, universal God who created and sustains all creation. This verse builds upon the first by moving from invoking Allah's name and mercy to acknowledging His supreme authority and the gratitude that arises from recognizing His role as the ultimate source of existence and all good things.","arabic":"الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ"},{"verse":"3","text":"Most Gracious, Most Merciful;","commentary":"This verse reiterates the divine attributes of <strong>\"the Compassionate, the Merciful,\"</strong> previously mentioned in the first verse. The repetition <strong>emphasizes the all-encompassing nature of Allah's mercy and compassion</strong>. These attributes define the fundamental relationship between the Creator (Allah) and all of creation, highlighting love, peace, care, and reassurance. This verse further develops the understanding of Allah introduced in the preceding verses, focusing on the quality that underpins His Lordship and actions.","arabic":"الرَّحْمَٰنِ الرَّحِيمِ"},{"verse":"4","text":"Master of the Day of Judgment.","commentary":"This verse introduces the concept of a <strong>\"Day of Judgement,\"</strong> a time in the future when people will be held accountable for their actions. By stating that Allah is the <strong>\"Master\"</strong> of this day, the verse underscores His ultimate authority and justice. This belief in an afterlife, where good deeds are rewarded and wrongdoings are punished, is a core principle in Islam. It connects with the previous verses by establishing that the same merciful and sovereign Allah will also be the ultimate judge, bringing balance and justice to the world. This belief encourages people to consider the consequences of their actions beyond their current life.","arabic":"مَالِكِ يَوْمِ الدِّينِ"},{"verse":"5","text":"Thee do we worship, and Thine aid we seek.","commentary":"This verse marks a significant shift, moving from praising and acknowledging Allah's attributes to a <strong>declaration of devotion and reliance</strong>. The phrase <strong>\"You alone do we worship\"</strong> emphasizes the <strong>oneness of God</strong> and the rejection of worshipping any other beings or idols. Similarly, <strong>\"to You alone do we turn for help\"</strong> signifies complete dependence on Allah for guidance and assistance in all aspects of life. This verse logically follows the recognition of Allah's sovereignty, mercy, and role as the ultimate judge, as it is to this all-powerful and compassionate being that one would naturally turn for worship and support. This principle is seen as liberating individuals from dependence on other powers.","arabic":"إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ"},{"verse":"6","text":"Show us the straight way,","commentary":"Having declared their exclusive worship and reliance on Allah, the verse now presents a <strong>supplication or prayer for guidance</strong>. The <strong>\"straight path\"</strong> symbolizes the right way of living, a path that leads to happiness and fulfillment in this life and the next. This verse is a direct consequence of the preceding one, as those who acknowledge Allah's uniqueness naturally seek His guidance to live according to His will. This highlights the ongoing need for divine assistance in navigating life.","arabic":"اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ"},{"verse":"7","text":"The way of those on whom Thou hast bestowed Thy Grace, those whose (portion) is not wrath, and who go not astray.","commentary":"This final verse of the Surah <strong>clarifies the nature of the \"straight path\"</strong> mentioned in the previous verse. It is defined as <strong>\"the path of those on whom You have bestowed Your favours,\"</strong> suggesting a way of life lived in accordance with divine will and resulting in blessings. Conversely, it is distinguished from the path of <strong>\"those who have incurred Your wrath\"</strong> (those who knowingly deviate from truth) and <strong>\"those who have gone astray\"</strong> (those who are ignorant of the truth). This verse provides a further understanding of the guidance sought in the previous verse, illustrating it through examples of those who followed it and those who did not, emphasizing the importance of living in accordance with divine favor and avoiding paths that lead away from it. The entire Surah thus concludes with a clear articulation of the desired path and a contrast with undesirable ones.","arabic":"صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ"}];
+    function renderVerses() {
+      const container = document.getElementById('verseContainer');
+      verses.forEach((verse, index) => {
+        const verseDiv = document.createElement('div');
+        verseDiv.classList.add('verse');
+
+        const verseNumber = document.createElement('div');
+        verseNumber.classList.add('verse-number');
+        verseNumber.textContent = 'Verse ' + verse.verse;
+
+        const arabicText = document.createElement('div');
+        arabicText.classList.add('arabic-text');
+        arabicText.textContent = verse.arabic;
+
+        const verseText = document.createElement('div');
+        verseText.classList.add('verse-text');
+        verseText.innerHTML = verse.text;
+
+        const verseCommentary = document.createElement('div');
+        verseCommentary.classList.add('commentary');
+        verseCommentary.innerHTML = verse.commentary;
+
+        verseDiv.appendChild(verseNumber);
+        verseDiv.appendChild(arabicText);
+        verseDiv.appendChild(verseText);
+        verseDiv.appendChild(verseCommentary);
+
+        container.appendChild(verseDiv);
+      });
+    }
+    renderVerses();
+  </script>
+</body>
+</html>
