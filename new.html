@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Qur'an Sura Index</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 2rem;
+      background: #f8f9fa;
+    }
+    h1 {
+      margin-bottom: 1rem;
+    }
+    .sura-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 0.5rem;
+    }
+    .sura-list a {
+      display: block;
+      padding: 0.5rem;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+    }
+    .sura-list a:hover {
+      background-color: #e6f2ff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Qur'an Sura Links (1-114)</h1>
+  <div class="sura-list">
+    <!-- Links will be inserted here -->
+    <script>
+      for (let i = 1; i <= 114; i++) {
+        const a = document.createElement('a');
+        a.href = `new/${i}.html`;
+        a.textContent = `Sura ${i}`;
+        document.currentScript.parentElement.appendChild(a);
+      }
+    </script>
+  </div>
+</body>
+</html>
