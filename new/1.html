@@ -1,104 +1,83 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sura</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 0;
-    }
-    .container {
-      width: 80%;
-      margin: 20px auto;
-      background-color: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    .verse {
-      padding: 15px;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      background-color: #f4f4f4;
-      transition: background-color 0.3s ease;
-    }
-    .verse:nth-child(even) {
-      background-color: #e1f7d5;
-    }
-    .verse:nth-child(odd) {
-      background-color: #f4f4f4;
-    }
-    .verse-number {
-      font-size: 1.5em;
-      font-weight: bold;
-      color: #333;
-    }
-    .arabic-text {
-      font-size: 1.4em;
-      direction: rtl;
-      text-align: right;
-      font-family: 'Amiri', serif;
-      color: #222;
-      margin-top: 10px;
-    }
-    .verse-text {
-      font-size: 1.2em;
-      color: #555;
-      margin: 10px 0;
-    }
-    .commentary {
-      font-size: 1em;
-      color: #444;
-      line-height: 1.6;
-      background-color: #fff;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    }
-    .commentary b {
-      color: #333;
-    }
-  </style>
+  <title>Sura 1</title>
+  <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <div class="container" id="verseContainer"></div>
-  <script>
-    const verses = [{"verse":"1","text":"In the name of Allah, Most Gracious, Most Merciful.","commentary":"This opening verse is the phrase Muslims use to begin many actions, including reading the Qur'an. It teaches us to start by invoking the name of Allah. It introduces Allah using two of His most significant names: *al-Rahman*, the Most Gracious, and *al-Rahim*, the Most Merciful. These names together describe the immense and all-encompassing nature of Allah's mercy and compassion, qualities that are uniquely His. Beginning with this phrase establishes a fundamental principle of recognizing Allah before commencing anything.","arabic":"بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ"},{"verse":"2","text":"Praise be to Allah, the Cherisher and Sustainer of the worlds;","commentary":"Following the invocation of Allah's name and mercy, this verse directs us to offer praise to Him. Praising Allah is a natural response that arises from recognizing His immense grace and acknowledging that He is the source of all blessings and the Cherisher and Sustainer of everything that exists. The phrase \"Lord of all the worlds\" emphasizes that Allah is the sole Creator, Owner, and Manager of the entire universe, actively caring for and sustaining all of creation. This highlights Allah's unique and absolute authority over all things.","arabic":"الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ"},{"verse":"3","text":"Most Gracious, Most Merciful;","commentary":"These two attributes of Allah, Most Gracious (*al-Rahman*) and Most Merciful (*al-Rahim*), are repeated here after the declaration of His absolute Lordship. Their reiteration underscores the profound connection between Allah, the Creator, and His creation, a relationship built upon overwhelming mercy and compassion. This repetition serves to emphasize that Allah's interaction with the world and its inhabitants is characterized by love, care, and reassurance, which inspires deep gratitude and continuous praise from believers.","arabic":"الرَّحْمَٰنِ الرَّحِيمِ"},{"verse":"4","text":"Master of the Day of Judgment.","commentary":"This verse introduces another fundamental principle of Islam: belief in the Day of Judgment. By stating that Allah is the \"Master of the Day of Judgment,\" we affirm that He alone has complete control and authority over the day when all people will be accounted for their deeds in this life. Belief in this future reality is essential because it helps focus human attention beyond just the immediate worldly life. It encourages moral responsibility, gives purpose to life, and provides assurance that ultimate justice will be served.","arabic":"مَالِكِ يَوْمِ الدِّينِ"},{"verse":"5","text":"Thee do we worship, and Thine aid we seek.","commentary":"This verse marks a significant transition from acknowledging who Allah is (Verses 1-4) to declaring our personal response and commitment to Him. It is a direct and powerful declaration that all acts of worship, submission, and devotion are directed solely to Allah. Similarly, we affirm that we seek help, support, and assistance exclusively from Him. This principle is central to Islamic monotheism, emphasizing that a believer relies completely on Allah, leading to freedom from dependence on or servitude to anything or anyone else.","arabic":"إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ"},{"verse":"6","text":"Show us the straight way,","commentary":"Following the declaration of devotion and reliance on Allah (Verse 5), this verse becomes a direct plea to Allah for guidance. We ask Allah to guide us to and keep us on the \"straight way.\" This \"straight way\" represents the path of truth, righteousness, and balance that leads to success and well-being in both this life and the hereafter. It is an acknowledgment that humans are inherently in need of divine guidance and that only Allah can provide it. This verse sets the stage for the clarification of this path in the verse that follows.","arabic":"اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ"},{"verse":"7","text":"The way of those on whom Thou hast bestowed Thy Grace, those whose (portion) is not wrath, and who go not astray.","commentary":"This final verse clarifies the nature of the \"straight way\" sought in the previous verse. It is described as the path of those whom Allah has blessed and favored with His guidance and grace. This path is contrasted with two other paths: the path of those who have incurred Allah's displeasure, often due to rejecting or deviating from the truth after knowing it, and the path of those who have gone astray, often due to ignorance, heedlessness, or misguidance. This verse defines the desired path as one that leads to receiving Allah's grace and protection from deviation and displeasure.","arabic":"صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ"}];
-    function renderVerses() {
-      const container = document.getElementById('verseContainer');
-      verses.forEach((verse, index) => {
-        const verseDiv = document.createElement('div');
-        verseDiv.classList.add('verse');
+  <h1>Sura 1</h1>
+  
+    <div class="verse">
+      <div class="arabic">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</div>
+      <div class="translation"><strong>Translation:</strong> In the name of Allah, Most Gracious, Most Merciful.</div>
+      <div class="commentary"><strong>Commentary:</strong> This opening verse is the phrase Muslims use to begin many actions, including reading the Qur'an. It teaches us to start by invoking the name of Allah. It introduces Allah using two of His most significant names: *al-Rahman*, the Most Gracious, and *al-Rahim*, the Most Merciful. These names together describe the immense and all-encompassing nature of Allah's mercy and compassion, qualities that are uniquely His. Beginning with this phrase establishes a fundamental principle of recognizing Allah before commencing anything.</div>
+      <div class="fi"><strong>Finnish:</strong> Tämä aloitusjae on lause, jota muslimit käyttävät monien tekojensa, mukaan lukien Koraanin lukemisen, aloittamiseen. Se opettaa meitä aloittamaan avunpyynnöllä Allahin nimeen. Se esittelee Allahin käyttäen kahta Hänen merkittävintä nimeään: *al-Rahman*, Kaikkein Armollisin, ja *al-Rahim*, Laupein. Nämä nimet yhdessä kuvaavat Allahin armon ja myötätunnon suunnattomuutta ja kaikenkattavuutta, ominaisuuksia jotka ovat ainutlaatuisesti Hänen. Tällä lauseella aloittaminen asettaa perustavanlaatuisen periaatteen Allahin tunnustamisesta ennen minkään aloittamista.</div>
+      <div class="ar">هذه الآية الافتتاحية هي العبارة التي يستخدمها المسلمون لبدء العديد من أعمالهم، بما في ذلك قراءة القرآن. إنها تعلمنا أن نبدأ باستدعاء اسم الله. وتُعرف بالله باستخدام اثنين من أهم أسمائه: *الرحمن*، وهو الأكثر رحمةً، و*الرحيم*، وهو شديد الرحمة. تصف هذان الاسمان معًا الطبيعة الشاسعة والشاملة لرحمة الله ورأفته، وهما صفتان له وحده. البدء بهذه العبارة يؤسس لمبدأ أساسي في معرفة الله قبل الشروع في أي شيء.</div>
+      <hr />
+    </div>
+  
 
-        const verseNumber = document.createElement('div');
-        verseNumber.classList.add('verse-number');
-        verseNumber.textContent = 'Verse ' + verse.verse;
+    <div class="verse">
+      <div class="arabic">الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ</div>
+      <div class="translation"><strong>Translation:</strong> Praise be to Allah, the Cherisher and Sustainer of the worlds;</div>
+      <div class="commentary"><strong>Commentary:</strong> Following the invocation of Allah's name and mercy, this verse directs us to offer praise to Him. Praising Allah is a natural response that arises from recognizing His immense grace and acknowledging that He is the source of all blessings and the Cherisher and Sustainer of everything that exists. The phrase "Lord of all the worlds" emphasizes that Allah is the sole Creator, Owner, and Manager of the entire universe, actively caring for and sustaining all of creation. This highlights Allah's unique and absolute authority over all things.</div>
+      <div class="fi"><strong>Finnish:</strong> Allahin nimen ja armon avunpyynnön jälkeen tämä jae ohjaa meitä ylistämään Häntä. Allahin ylistäminen on luonnollinen vastaus, joka syntyy Hänen suunnattoman armonsa tunnustamisesta ja sen ymmärtämisestä, että Hän on kaikkien siunausten lähde ja kaiken olemassa olevan Ylläpitäjä ja Elättäjä. Ilmaus "kaikkien maailmojen Herra" korostaa, että Allah on ainoa koko universumin Luoja, Omistaja ja Hallinnoija, joka aktiivisesti huolehtii ja ylläpitää kaikkea luomakuntaa. Tämä korostaa Allahin ainutlaatuista ja täydellistä auktoriteettia kaiken yli.</div>
+      <div class="ar">بعد استدعاء اسم الله ورحمته، توجهنا هذه الآية لتقديم الحمد له. إن حمد الله هو استجابة طبيعية تنبع من إدراك عظم نعمته والاعتراف بأنه مصدر كل البركات، وهو المربي والمدبر لكل ما هو موجود. عبارة "رب العالمين" تؤكد أن الله هو الخالق المالك والمدبر الوحيد للكون بأسره، وهو الذي يعتني بكل مخلوقاته ويدبرها. وهذا يسلط الضوء على سلطة الله الفريدة والمطلقة على كل شيء.</div>
+      <hr />
+    </div>
+  
 
-        const arabicText = document.createElement('div');
-        arabicText.classList.add('arabic-text');
-        arabicText.textContent = verse.arabic;
+    <div class="verse">
+      <div class="arabic">الرَّحْمَٰنِ الرَّحِيمِ</div>
+      <div class="translation"><strong>Translation:</strong> Most Gracious, Most Merciful;</div>
+      <div class="commentary"><strong>Commentary:</strong> These two attributes of Allah, Most Gracious (*al-Rahman*) and Most Merciful (*al-Rahim*), are repeated here after the declaration of His absolute Lordship. Their reiteration underscores the profound connection between Allah, the Creator, and His creation, a relationship built upon overwhelming mercy and compassion. This repetition serves to emphasize that Allah's interaction with the world and its inhabitants is characterized by love, care, and reassurance, which inspires deep gratitude and continuous praise from believers.</div>
+      <div class="fi"><strong>Finnish:</strong> Nämä kaksi Allahin ominaisuutta, Kaikkein Armollisin (*al-Rahman*) ja Laupein (*al-Rahim*), toistetaan tässä sen jälkeen, kun on julistettu Hänen täydellinen herruutensa. Niiden toisto korostaa syvää yhteyttä Allahin, Luojan, ja Hänen luomakuntansa välillä – suhdetta, joka perustuu ylitsevuotavaan armoon ja myötätuntoon. Tämä toisto korostaa, että Allahin vuorovaikutus maailman ja sen asukkaiden kanssa on luonteenomaista rakkaus, huolenpito ja varmuus, mikä innoittaa syvää kiitollisuutta ja jatkuvaa ylistystä uskovaisilta.</div>
+      <div class="ar">هاتان الصفتان لله، الرحمن والرحيم، تتكرران هنا بعد الإعلان عن ربوبيته المطلقة. تأكيد تكرارهما يؤكد على العلاقة العميقة بين الله الخالق ومخلوقاته، وهي علاقة مبنية على رحمة ورأفة شاملتين. يخدم هذا التكرار لتوكيد أن تعامل الله مع العالم وسكانه يتسم بالمحبة والرعاية والاطمئنان، وهذا يلهم الشكر العميق والحمد المستمر من المؤمنين.</div>
+      <hr />
+    </div>
+  
 
-        const verseText = document.createElement('div');
-        verseText.classList.add('verse-text');
-        verseText.innerHTML = verse.text;
+    <div class="verse">
+      <div class="arabic">مَالِكِ يَوْمِ الدِّينِ</div>
+      <div class="translation"><strong>Translation:</strong> Master of the Day of Judgment.</div>
+      <div class="commentary"><strong>Commentary:</strong> This verse introduces another fundamental principle of Islam: belief in the Day of Judgment. By stating that Allah is the "Master of the Day of Judgment," we affirm that He alone has complete control and authority over the day when all people will be accounted for their deeds in this life. Belief in this future reality is essential because it helps focus human attention beyond just the immediate worldly life. It encourages moral responsibility, gives purpose to life, and provides assurance that ultimate justice will be served.</div>
+      <div class="fi"><strong>Finnish:</strong> Tämä jae esittelee toisen perusperiaatteen islamissa: uskon Tuomion päivään. Toteamalla, että Allah on "Tuomion päivän Hallitsija", me vahvistamme, että Hänellä yksin on täydellinen hallinta ja auktoriteetti päivänä, jolloin kaikki ihmiset joutuvat vastuuseen teoistaan tässä elämässä. Usko tähän tulevaan todellisuuteen on välttämätöntä, koska se auttaa keskittämään ihmisen huomion pelkän välittömän maailmallisen elämän tuolle puolen. Se kannustaa moraaliseen vastuuseen, antaa tarkoituksen elämälle ja tarjoaa varmuuden siitä, että lopullinen oikeudenmukaisuus toteutuu.</div>
+      <div class="ar">تقدم هذه الآية مبدأً أساسيًا آخر في الإسلام: الإيمان بيوم القيامة. بالقول إن الله هو "مالك يوم الدين"، نؤكد أنه وحده يمتلك السيطرة والسلطة الكاملة على اليوم الذي سيحاسب فيه جميع الناس على أعمالهم في هذه الحياة. الإيمان بهذه الحقيقة المستقبلية ضروري لأنه يساعد على توجيه انتباه الإنسان إلى ما وراء مجرد الحياة الدنيوية الفورية. إنه يشجع على المسؤولية الأخلاقية، ويعطي للحياة غرضًا، ويوفر اليقين بأن العدالة المطلقة ستتحقق.</div>
+      <hr />
+    </div>
+  
 
-        const verseCommentary = document.createElement('div');
-        verseCommentary.classList.add('commentary');
-        verseCommentary.innerHTML = verse.commentary;
+    <div class="verse">
+      <div class="arabic">إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ</div>
+      <div class="translation"><strong>Translation:</strong> Thee do we worship, and Thine aid we seek.</div>
+      <div class="commentary"><strong>Commentary:</strong> This verse marks a significant transition from acknowledging who Allah is (Verses 1-4) to declaring our personal response and commitment to Him. It is a direct and powerful declaration that all acts of worship, submission, and devotion are directed solely to Allah. Similarly, we affirm that we seek help, support, and assistance exclusively from Him. This principle is central to Islamic monotheism, emphasizing that a believer relies completely on Allah, leading to freedom from dependence on or servitude to anything or anyone else.</div>
+      <div class="fi"><strong>Finnish:</strong> Tämä jae merkitsee merkittävää siirtymää Allahin tunnustamisesta (Jakeet 1-4) henkilökohtaisen vastauksemme ja sitoutumisemme julistamiseen Hänelle. Se on suora ja voimakas julistus siitä, että kaikki palvonnan, alistumisen ja omistautumisen teot on suunnattu yksinomaan Allahille. Vastaavasti me vahvistamme, että etsimme apua, tukea ja tukea yksinomaan Häneltä. Tämä periaate on keskeinen islamilaisessa monoteismissa, korostaen sitä, että uskovainen luottaa täysin Allahiin, mikä johtaa vapauteen riippuvuudesta tai orjuudesta mistään tai kenestäkään muusta.</div>
+      <div class="ar">تمثل هذه الآية انتقالًا هامًا من الإقرار بمن هو الله (الآيات 1-4) إلى إعلان استجابتنا الشخصية والتزامنا له. إنها إعلان مباشر وقوي بأن جميع أعمال العبادة والخضوع والتفاني موجهة حصريًا لله. وبالمثل، نؤكد أننا نطلب المساعدة والدعم والعون منه وحده. هذا المبدأ أساسي في التوحيد الإسلامي، مؤكدًا أن المؤمن يعتمد كليًا على الله، مما يؤدي إلى التحرر من الاعتماد على أي شيء أو أي شخص آخر أو العبودية له.</div>
+      <hr />
+    </div>
+  
 
-        verseDiv.appendChild(verseNumber);
-        verseDiv.appendChild(arabicText);
-        verseDiv.appendChild(verseText);
-        verseDiv.appendChild(verseCommentary);
+    <div class="verse">
+      <div class="arabic">اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ</div>
+      <div class="translation"><strong>Translation:</strong> Show us the straight way,</div>
+      <div class="commentary"><strong>Commentary:</strong> Following the declaration of devotion and reliance on Allah (Verse 5), this verse becomes a direct plea to Allah for guidance. We ask Allah to guide us to and keep us on the "straight way." This "straight way" represents the path of truth, righteousness, and balance that leads to success and well-being in both this life and the hereafter. It is an acknowledgment that humans are inherently in need of divine guidance and that only Allah can provide it. This verse sets the stage for the clarification of this path in the verse that follows.</div>
+      <div class="fi"><strong>Finnish:</strong> Allahille omistautumisen ja Häneen luottamisen julistuksen jälkeen (Jae 5) tästä jakeesta tulee suora rukous Allahille ohjauksesta. Me pyydämme Allahia ohjaamaan meitä "suoralle tielle" ja pitämään meidät sillä. Tämä "suora tie" edustaa totuuden, vanhurskauden ja tasapainon polkua, joka johtaa menestykseen ja hyvinvointiin sekä tässä elämässä että tuonpuoleisessa. Se on tunnustus siitä, että ihmiset ovat luonnostaan jumalallisen ohjauksen tarpeessa ja että vain Allah voi sen tarjota. Tämä jae valmistaa pohjaa tämän polun selvennykselle seuraavassa jakeessa.</div>
+      <div class="ar">بعد إعلان التعبد والتوكل على الله (الآية 5)، تصبح هذه الآية دعاءً مباشرًا لله لطلب الهداية. نطلب من الله أن يهدينا إلى "الصراط المستقيم" وأن يُثبتنا عليه. يمثل هذا "الصراط المستقيم" طريق الحق والصلاح والاعتدال الذي يؤدي إلى النجاح والرفاهية في هذه الحياة والآخرة. إنه اعتراف بأن البشر يحتاجون بطبيعتهم إلى الهداية الإلهية وأن الله وحده هو الذي يمكنه توفيرها. تمهد هذه الآية الطريق لتوضيح هذا الصراط في الآية التي تليها.</div>
+      <hr />
+    </div>
+  
 
-        container.appendChild(verseDiv);
-      });
-    }
-    renderVerses();
-  </script>
+    <div class="verse">
+      <div class="arabic">صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ</div>
+      <div class="translation"><strong>Translation:</strong> The way of those on whom Thou hast bestowed Thy Grace, those whose (portion) is not wrath, and who go not astray.</div>
+      <div class="commentary"><strong>Commentary:</strong> This final verse clarifies the nature of the "straight way" sought in the previous verse. It is described as the path of those whom Allah has blessed and favored with His guidance and grace. This path is contrasted with two other paths: the path of those who have incurred Allah's displeasure, often due to rejecting or deviating from the truth after knowing it, and the path of those who have gone astray, often due to ignorance, heedlessness, or misguidance. This verse defines the desired path as one that leads to receiving Allah's grace and protection from deviation and displeasure.</div>
+      <div class="fi"><strong>Finnish:</strong> Tämä viimeinen jae selventää edellisessä jakeessa pyydetyn "suoran tien" luonnetta. Se kuvataan niiden polkuna, joita Allah on siunannut ja suosinut ohjauksellaan ja armollaan. Tätä polkua verrataan kahteen muuhun polkuun: niiden polkuun, jotka ovat joutuneet Allahin epämiellyttäväksi, usein torjumalla tai poikkeamalla totuudesta sen tietämisen jälkeen, ja niiden polkuun, jotka ovat eksyneet, usein tietämättömyyden, huolimattomuuden tai harhaannuksen vuoksi. Tämä jae määrittää toivotun polun sellaiseksi, joka johtaa Allahin armon vastaanottamiseen ja suojeluun poikkeamilta ja epämiellyttävyydeltä.</div>
+      <div class="ar">توضح هذه الآية الأخيرة طبيعة "الصراط المستقيم" المطلوب في الآية السابقة. يوصف بأنه طريق أولئك الذين أنعم الله عليهم وفضلهم بهدايته ونعمته. يتناقض هذا الطريق مع مسارين آخرين: طريق أولئك الذين غضب الله عليهم، غالبًا بسبب رفض الحق أو الانحراف عنه بعد معرفته، وطريق أولئك الذين ضلوا، غالبًا بسبب الجهل أو الإهمال أو التضليل. تُعرّف هذه الآية الصراط المنشود بأنه الذي يؤدي إلى نيل رحمة الله والحماية من الانحراف وغضبه.</div>
+      <hr />
+    </div>
+  
 </body>
 </html>
+  
