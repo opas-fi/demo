@@ -1,0 +1,5 @@
+Generating HTML for Sura 3
+Total verses (based on translation): 200
+Translation keys: 200
+Reflection keys: 200
+Arabic keys: 200

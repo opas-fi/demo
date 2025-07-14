@@ -1,132 +1,92 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Qur'an Index</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <h1>Qur'an Index</h1>
-    <ul>
-      <li><a href="1.html">Sura 1: Al-Fatiha, The Opening</a></li>
-      <li><a href="2.html">Sura 2: Al-Baqara, The Heifer</a></li>
-      <li>Sura 3: Aal-i-Imran, The Family of Imran</li>
-      <li>Sura 4: An-Nisa, The Women</li>
-      <li>Sura 5: Al-Ma'ida, The Table</li>
-      <li>Sura 6: Al-An'am, The Cattle</li>
-      <li>Sura 7: Al-A'raf, The Heights</li>
-      <li>Sura 8: Al-Anfal, The Spoils of War</li>
-      <li>Sura 9: At-Tawba, The Repentance</li>
-      <li>Sura 10: Yunus, Jonah</li>
-      <li>Sura 11: Hud, Hud</li>
-      <li>Sura 12: Yusuf, Joseph</li>      
-      <li>13: Ar-Ra'd, The Thunder</li>
-      <li>14: Ibrahim, Abraham</li>
-      <li>15: Al-Hijr, The Stoneland</li>
-      <li>16: An-Nahl, The Honey Bees</li>
-      <li>17: Al-Isra, The Night Journey</li>
-      <li>18: Al-Kahf, The Cave</li>
-      <li>19: Maryam, Mary</li>
-      <li>20: Ta-Ha, Ta-Ha</li>
-      <li>21: Al-Anbiya, The Prophets</li>
-      <li>22: Al-Hajj, The Pilgrimage</li>
-      <li>23: Al-Mu'minun, The Believers</li>
-      <li>24: An-Nur, The Light</li>
-      <li>25: Al-Furqan, The Criterion</li>
-      <li>26: Ash-Shu'ara, The Poets</li>
-      <li>27: An-Naml, The Ant</li>
-      <li>28: Al-Qasas, The Stories</li>
-      <li>29: Al-Ankabut, The Spider</li>
-      <li>30: Ar-Rum, The Romans</li>
-      <li>31: Luqman, Luqman</li>
-      <li>32: As-Sajda, The Prostration</li>
-      <li>33: Al-Ahzab, The Clans</li>
-      <li>34: Saba, Sheba</li>
-      <li>35: Fatir, The Originator</li>
-      <li>36: Ya-Sin, Yaseen</li>
-      <li>37: As-Saffat, Drawn up in Ranks</li>
-      <li>38: Sad, The Letter Sad</li>
-      <li>39: Az-Zumar, The Troops</li>
-      <li>40: Ghafir, The Forgiver</li>
-      <li>41: Fussilat, Explained in Detail</li>
-      <li>42: Ash-Shura, The Consultation</li>
-      <li>43: Az-Zukhruf, The Ornaments of Gold</li>
-      <li>44: Ad-Dukhan, The Smoke</li>
-      <li>45: Al-Jathiya, Crouching</li>
-      <li>46: Al-Ahqaf, The Dunes</li>
-      <li>47: Muhammad, Muhammad</li>
-      <li>48: Al-Fath, The Victory</li>
-      <li>49: Al-Hujurat, The Inner Apartments</li>
-      <li>50: Qaf, The Letter Qaf</li>
-      <li>51: Adh-Dhariyat, The Winnowing Winds</li>
-      <li>52: At-Tur, The Mount</li>
-      <li>53: An-Najm, The Star</li>
-      <li>54: Al-Qamar, The Moon</li>
-      <li>55: Ar-Rahman, The Beneficent</li>
-      <li>56: Al-Waqi'a, The Inevitable</li>
-      <li>57: Al-Hadid, The Iron</li>
-      <li>58: Al-Mujadila, The Pleading</li>
-      <li>59: Al-Hashr, The Exile</li>
-      <li>60: Al-Mumtahina, Examining Her</li>
-      <li>61: As-Saff, The Ranks</li>
-      <li>62: Al-Jumu'a, Friday</li>
-      <li>63: Al-Munafiqun, The Hypocrites</li>
-      <li>64: At-Taghabun, Mutual Disillusion</li>
-      <li>65: At-Talaq, Divorce</li>
-      <li>66: At-Tahrim, The Prohibition</li>
-      <li>67: Al-Mulk, The Sovereignty</li>
-      <li>68: Al-Qalam, The Pen</li>
-      <li>69: Al-Haqqa, The Reality</li>
-      <li>70: Al-Ma'arij, The Ascending Stairways</li>
-      <li>71: Nuh, Noah</li>
-      <li>72: Al-Jinn, The Jinn</li>
-      <li>73: Al-Muzzammil, The Enshrouded One</li>
-      <li>74: Al-Muddathir, The Cloaked One</li>
-      <li>75: Al-Qiyama, The Resurrection</li>
-      <li>76: Al-Insan, Human</li>
-      <li>77: Al-Mursalat, The Emissaries</li>
-      <li>78: An-Naba', The Announcement</li>
-      <li>79: An-Nazi'at, Those Who Drag Forth</li>
-      <li>80: Abasa, He Frowned</li>
-      <li>81: At-Takwir, The Folding Up</li>
-      <li>82: Al-Infitar, The Cleaving</li>
-      <li>83: Al-Mutaffifin, Defrauding</li>
-      <li>84: Al-Inshiqaq, The Splitting Open</li>
-      <li>85: Al-Buruj, The Constellations</li>
-      <li>86: At-Tariq, The Morning Star</li>
-      <li>87: Al-A'la, The Most High</li>
-      <li>88: Al-Ghashiya, The Overwhelming</li>
-      <li>89: Al-Fajr, The Dawn</li>
-      <li>90: Al-Balad, The City</li>
-      <li>91: Ash-Shams, The Sun</li>
-      <li>92: Al-Lail, The Night</li>
-      <li>93: Ad-Dhuha, The Morning Hours</li>
-      <li>94: Ash-Sharh, The Consolation</li>
-      <li>95: At-Tin, The Fig</li>
-      <li>96: Al-Alaq, The Clot</li>
-      <li>97: Al-Qadr, The Power, Fate</li>
-      <li>98: Al-Bayyina, The Evidence</li>
-      <li>99: Az-Zalzala, The Earthquake</li>
-      <li>100: Al-Adiyat, The Chargers</li>
-      <li>101: Al-Qari'a, The Calamity</li>
-      <li>102: At-Takathur, Competition</li>
-      <li>103: Al-Asr, The Time</li>
-      <li>104: Al-Humaza, The Traducer</li>
-      <li>105: Al-Fil, The Elephant</li>
-      <li>106: Quraysh, Quraysh</li>
-      <li>107: Al-Ma'un, Almsgiving</li>
-      <li>108: Al-Kawthar, Abundance</li>
-      <li>109: Al-Kafirun, The Disbelievers</li>
-      <li>110: An-Nasr, Divine Support</li>
-      <li>111: Al-Masad, The Palm Fibre</li>
-      <li>112: Al-Ikhlas, Purity of Faith</li>
-      <li>113: Al-Falaq, The Dawn</li>
-      <li>114: An-Nas, Mankind</li>
 
-    </ul>
-  </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sura Explorer</title>
+    <link rel="stylesheet" href="main.css" />
+
+</head>
+
+<body>
+    <main class="container">
+        <h1>📖 Sura Explorer</h1>
+
+        <section class="sura">
+            <h2>Sura 1</h2>
+            <ul class="language-list">
+                <li>🇬🇧 <a href="./English/1.html">English</a></li>
+                <li>🇫🇮 <a href="./Finnish/1.html">Finnish</a></li>
+                <li>🧪 <a href="./Urdu/1.html">Urdu (Machine translated – Experimental)</a></li>
+            </ul>
+        </section>
+
+        <section class="sura">
+            <h2>Sura 3</h2>
+            <ul class="language-list">
+                <li>🇬🇧 <a href="./English/3.html">English</a></li>
+                <li>🇫🇮 <a href="./Finnish/3.html">Finnish</a></li>
+                <li>🧪 <a href="./Urdu/3.html">Urdu (Machine translated – Experimental)</a></li>
+            </ul>
+        </section>
+
+
+        <section class="sura">
+            <h2>Sura 2</h2>
+            <p class="not-ready"> ⏳ Not ready yet (expected: <strong>15/08/2025</strong>)
+            </p>
+            <ul class="language-list dimmed">
+                <li>English</li>
+                <li>Finnish</li>
+                <li>Urdu <small>(Experimental)</small></li>
+            </ul>
+        </section>
+
+        <section class="sura">
+            <h2>Sura 4</h2>
+            <p class="not-ready"> ⏳ Not ready yet (expected: <strong>31/12/2025</strong>)
+            </p>
+            <ul class="language-list dimmed">
+                <li>English</li>
+                <li>Finnish</li>
+                <li>Urdu <small>(Experimental)</small></li>
+            </ul>
+        </section>
+
+        <section class="sura">
+            <h2>Sura 5</h2>
+            <p class="not-ready"> ⏳ Not ready yet (expected: <strong>30/05/2026</strong>)
+            </p>
+            <ul class="language-list dimmed">
+                <li>English</li>
+                <li>Finnish</li>
+                <li>Urdu <small>(Experimental)</small></li>
+            </ul>
+        </section>
+
+        <section class="sura">
+            <h2>Sura 6</h2>
+            <p class="not-ready"> ⏳ Not ready yet (expected: <strong>15/08/2026</strong>)
+            </p>
+            <ul class="language-list dimmed">
+                <li>English</li>
+                <li>Finnish</li>
+                <li>Urdu <small>(Experimental)</small></li>
+            </ul>
+        </section>
+
+        <section class="sura">
+            <h2>Sura 7</h2>
+            <p class="not-ready"> ⏳ Not ready yet (expected: <strong>15/08/2026</strong>)
+            </p>
+            <ul class="language-list dimmed">
+                <li>English</li>
+                <li>Finnish</li>
+                <li>Urdu <small>(Experimental)</small></li>
+            </ul>
+        </section>
+    </main>
 </body>
+
 </html>
