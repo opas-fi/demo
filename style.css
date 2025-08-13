@@ -36,6 +36,7 @@ main.sura {
   text-align: right;
   border-radius: 6px;
   border-right: 5px solid #4ab9b9;
+  display: none !important;
 }
 
 /* Translation */
