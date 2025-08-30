@@ -2,7 +2,7 @@
 
 body {
   font-family: sans-serif;
-  background-color: #ededed;
+  background-color: #fdfdfd;
   color: #111;
   padding: 2em;
   line-height: 1.6;
@@ -11,7 +11,7 @@ body {
 main.sura {
   max-width: 850px;
   margin: auto;
-  background: #bee7a5;
+  background: #fff;
   padding: 2em;
   border-radius: 10px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
@@ -36,7 +36,6 @@ main.sura {
   text-align: right;
   border-radius: 6px;
   border-right: 5px solid #4ab9b9;
-  display: none !important;
 }
 
 /* Translation */
